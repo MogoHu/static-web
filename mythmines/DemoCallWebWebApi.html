@@ -7,7 +7,7 @@
 				function setStateBarColor() {
 					var color = prompt("请输入颜色","#8000FF00");
 					if(color){
-						ProbeLeagueApp.setStateBarColor(color);
+						ProbeMinesApp.setStateBarColor(color);
 					}
 				}
 
@@ -15,7 +15,7 @@
 				function setTitleBarColor() {
 					var color = prompt("请输入颜色","#800000FF");
 					if(color){
-						ProbeLeagueApp.setTitleBarColor(color);
+						ProbeMinesApp.setTitleBarColor(color);
 					}
 				}
 
@@ -23,7 +23,7 @@
 				function setTitleText() {
 					var title = prompt("请输入标题","我是标题内容");
 					if(title){
-						ProbeLeagueApp.setTitleText(title);
+						ProbeMinesApp.setTitleText(title);
 					}
 				}
 
@@ -31,7 +31,7 @@
 				function setBackImageUrl() {
 					var url = prompt("请输入返回图标url地址","https://z3.ax1x.com/2021/07/21/WUDL1P.png");
 					if(url){
-						ProbeLeagueApp.setBackImageUrl(url);
+						ProbeMinesApp.setBackImageUrl(url);
 					}
 				}
 
@@ -39,7 +39,7 @@
 				function setRightText() {
 					var text = prompt("请输入按钮文字","菜单");
 					if(text){
-						ProbeLeagueApp.setRightText(text);
+						ProbeMinesApp.setRightText(text);
 					}
 				}
 
@@ -47,13 +47,13 @@
 				function setRightImage() {
 					var url = prompt("请输入按钮图标url地址","https://z3.ax1x.com/2021/07/21/WUDqpt.png");
 					if(url){
-						ProbeLeagueApp.setRightImage(url);
+						ProbeMinesApp.setRightImage(url);
 					}
 				}
 
 				// 启用下拉刷新
 				function openRefresh() {
-					ProbeLeagueApp.setEnableRefresh(true);
+					ProbeMinesApp.setEnableRefresh(true);
 					alert("已启用，请下拉页面试试");
 				}
 
@@ -61,7 +61,7 @@
 				function onAppWebRefresh() {
 					alert("收到下拉刷新");
 					window.location.reload();
-					//ProbeLeagueApp.stopRefresh();
+					//ProbeMinesApp.stopRefresh();
 				}
 
 				// app点击标题栏右边Text回调函数
@@ -98,23 +98,23 @@
 <h2>1.UI相关API</h2>
 
 <h3>1.1状态栏</h3>
-是否显示：<a href="javascript:ProbeLeagueApp.setStateBarVisible(true)">显示</a>
-&nbsp;&nbsp;<a href="javascript:ProbeLeagueApp.setStateBarVisible(false)">隐藏</a>
+是否显示：<a href="javascript:ProbeMinesApp.setStateBarVisible(true)">显示</a>
+&nbsp;&nbsp;<a href="javascript:ProbeMinesApp.setStateBarVisible(false)">隐藏</a>
 <br/><br/>
-显示模式：<a href="javascript:ProbeLeagueApp.setStateBarMode(true)">深色</a>
-&nbsp;&nbsp;<a href="javascript:ProbeLeagueApp.setStateBarMode(false)">浅色</a>
+显示模式：<a href="javascript:ProbeMinesApp.setStateBarMode(true)">深色</a>
+&nbsp;&nbsp;<a href="javascript:ProbeMinesApp.setStateBarMode(false)">浅色</a>
 <br/><br/>
 背景颜色：<a href="javascript:setStateBarColor()">设置背景颜色</a>
 <br/><br/>
 
 <h3>1.2标题栏</h3>
-是否显示：<a href="javascript:ProbeLeagueApp.setTitleBarVisible(true)">显示</a>
-&nbsp;&nbsp;<a href="javascript:ProbeLeagueApp.setTitleBarVisible(false)">隐藏</a>
+是否显示：<a href="javascript:ProbeMinesApp.setTitleBarVisible(true)">显示</a>
+&nbsp;&nbsp;<a href="javascript:ProbeMinesApp.setTitleBarVisible(false)">隐藏</a>
 <br/><br/>
 背景颜色：<a href="javascript:setTitleBarColor()">设置背景颜色</a>
 <br/><br/>
-显示模式：<a href="javascript:ProbeLeagueApp.setTitleBarModel(false)">正常</a>
-&nbsp;&nbsp;<a href="javascript:ProbeLeagueApp.setTitleBarModel(true)">悬浮</a>
+显示模式：<a href="javascript:ProbeMinesApp.setTitleBarModel(false)">正常</a>
+&nbsp;&nbsp;<a href="javascript:ProbeMinesApp.setTitleBarModel(true)">悬浮</a>
 <br/><br/>
 标题文字：<a href="javascript:setTitleText()">设置标题</a>
 <br/><br/>
@@ -128,20 +128,20 @@
 
 <h3>1.3页面下拉刷新</h3>
 页面下拉刷新：<a href="javascript:openRefresh()">启用</a>
-&nbsp;&nbsp;<a href="javascript:ProbeLeagueApp.setEnableRefresh(false)">禁用</a>
-&nbsp;&nbsp;<a href="javascript:ProbeLeagueApp.stopRefresh()">停止(完成)刷新</a>
+&nbsp;&nbsp;<a href="javascript:ProbeMinesApp.setEnableRefresh(false)">禁用</a>
+&nbsp;&nbsp;<a href="javascript:ProbeMinesApp.stopRefresh()">停止(完成)刷新</a>
 <br/><br/>
 
 <h3>1.4Toast吐丝提示</h3>
-吐丝提示：<a href="javascript:ProbeLeagueApp.showToast('提示信息')">效果1</a>
-&nbsp;&nbsp;<a href="javascript:ProbeLeagueApp.showToast2('提示信息')">效果2</a>
+吐丝提示：<a href="javascript:ProbeMinesApp.showToast('提示信息')">效果1</a>
+&nbsp;&nbsp;<a href="javascript:ProbeMinesApp.showToast2('提示信息')">效果2</a>
 <br/><br/>
 
 <h3>1.5浏览器窗口</h3>
 当前窗口打开二级页面：<a href="DemoCallWebWebApi_sub.html">打开</a><br/>
-新窗口打开百度-调用API：<a href="javascript:ProbeLeagueApp.openNewBrowser('打开新窗口（API方式）', 'https://m.baidu.com/')">打开</a><br/>
+新窗口打开百度-调用API：<a href="javascript:ProbeMinesApp.openNewBrowser('打开新窗口（API方式）', 'https://m.baidu.com/')">打开</a><br/>
 新窗口打开百度-使用Url：<a href="https://m.baidu.com/?appTarget=newBrowser&appTitle=打开新窗口（Url方式）">打开</a><br/>
-关闭当前窗口：<a href="javascript:ProbeLeagueApp.closeBrowser()">关闭</a>
+关闭当前窗口：<a href="javascript:ProbeMinesApp.closeBrowser()">关闭</a>
 <br/><br/>
 </body>
 </html>
